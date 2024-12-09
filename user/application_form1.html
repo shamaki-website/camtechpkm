@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitionalt//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Application | Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<style>
+    label{
+        font-weight: bold;
+    }
+</style>
+</head>
+    <body>
+<form action="">   
+    <fieldset style="border-radius: 4px; font-size:16px; padding:10px; width: 1050px; line-height:1.8; align-content: center; background-color: bisque;">
+      <h4 style="text-align: center;background-color: pink; font-weight: bold;">PART I: Personal Information</h4>
+      <center>
+        <div class="mb-3">
+            <label for="exampleInputApplicationId1" class="form-label">Upload Picture</label>
+            <input type="file" accept="image/*" onchange="loadFile(event)" />
+            <p><img id="output" width="100"/></p>
+            <button type="" class="btn btn-primary">Upload</button>   
+          </div> 
+        </center>
+        <p> <b>NB:</b>  Every fields with star must be required (<strong style="color: red;">*</strong>)</p>
+        <hr style="background-color: black;">
+        <div class="mb-3">
+            <label for="exampleInputApplicationId1" class="form-label">Application ID</label>
+            <input type="text" name="applicationid" class="form-control" id="exampleInputApplicationId1" readonly />
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+          </div>    
+        <div class="mb-3">
+              <label for="exampleInputFullName1" class="form-label">Surname <strong style="color: red;">*</strong></label>
+              <input type="text" name="fullname" class="form-control" id="exampleInputFullName1" required />
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputFullName1" class="form-label">First Name<strong style="color: red;">*</strong></label>
+              <input type="text" name="fullname" class="form-control" id="exampleInputFullName1" required />
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputFullName1" class="form-label">Last Name<strong style="color: red;">*</strong></label>
+              <input type="text" name="fullname" class="form-control" id="exampleInputFullName1" required />
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputDob1" class="form-label">D.O.B <strong style="color: red;">*</strong></label>
+              <input type="date" name="dob" class="form-control" id="exampleInputDod1" required />
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputGender1" class="form-label">Gender <strong style="color: red;">*</strong></label>
+               <select name="gender" id=""  class="form-control" id="exampleInputGender1" required>
+                <option value="">--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+               </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputCountry1" class="form-label">Country <strong style="color: red;">*</strong></label>
+               <select name="country" id=""  class="form-control" id="exampleInputCountry1" required>
+                <option value="">--Select--</option>
+                <option value="nigeria">Nigeria</option>
+                <option value="china">China</option>
+               </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputState1" class="form-label">State <strong style="color: red;">*</strong></label>
+                <select name="state" onchange="toggleLGA(this);" id="state"class="form-control" value="" required="">
+                  <option value="" selected="selected">--Select State--</option>
+                            <option value="Abia">Abia</option>
+                            <option value="Adamawa">Adamawa</option>
+                            <option value="AkwaIbom">AkwaIbom</option>
+                            <option value="Anambra">Anambra</option>
+                            <option value="Bauchi">Bauchi</option>
+                            <option value="Bayelsa">Bayelsa</option>
+                            <option value="Benue">Benue</option>
+                            <option value="Borno">Borno</option>
+                            <option value="Cross River">Cross River</option>
+                            <option value="Delta">Delta</option>
+                            <option value="Ebonyi">Ebonyi</option>
+                            <option value="Edo">Edo</option>
+                            <option value="Ekiti">Ekiti</option>
+                            <option value="Enugu">Enugu</option>
+                            <option value="FCT">FCT</option>
+                            <option value="Gombe">Gombe</option>
+                            <option value="Imo">Imo</option>
+                            <option value="Jigawa">Jigawa</option>
+                            <option value="Kaduna">Kaduna</option>
+                            <option value="Kano">Kano</option>
+                            <option value="Katsina">Katsina</option>
+                            <option value="Kebbi">Kebbi</option>
+                            <option value="Kogi">Kogi</option>
+                            <option value="Kwara">Kwara</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Nasarawa">Nasarawa</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Ogun">Ogun</option>
+                            <option value="Ondo">Ondo</option>
+                            <option value="Osun">Osun</option>
+                            <option value="Oyo">Oyo</option>
+                            <option value="Plateau">Plateau</option>
+                            <option value="Rivers">Rivers</option>
+                            <option value="Sokoto">Sokoto</option>
+                            <option value="Taraba">Taraba</option>
+                            <option value="Yobe">Yobe</option>
+                            <option value="Zamfara">Zamafara</option>
+                              </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputLGA1" class="form-label">L.G.A <strong style="color: red;">*</strong></label>
+               <select name="lga" id="lga"  class="form-control select-lga" required>
+               </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputHomeTown1" class="form-label">Home Town<strong style="color: red;">*</strong></label>
+                <input type="text" name="hometown" class="form-control" id="exampleInputHomeTown1"required>
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputHomeAddress1" class="form-label">Home Address <strong style="color: red;">*</strong></label>
+                <textarea name="homeaddress" id="" cols="" rows="2" class="form-control" id="exampleInputHomeAddress1" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputMobilePhoneNo1" class="form-label">Mobile Phone No. <strong style="color: red;">*</strong></label>
+                <input type="number" name="mobileno" class="form-control" id="exampleInputMobilePhoneNo1" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email <strong style="color: red;">*</strong></label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPhysicallyChallenged1" class="form-label">Physically Challenged? <strong style="color: red;">*</strong></label>
+                <input type="email" name="physical" class="form-control" id="exampleInputPhysicallyChallenged1" required>
+              </div>
+            <!-- <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <button type="submit" class="btn btn-primary">Save and Continue</button>        
+    </fieldset>
+</form>
+
+
+<script>
+  var loadFile = function(event) {
+      var image = document.getElementById('output');
+      image.src=URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+                      <script src="js/lga.min.js"></script>
+        <script src="admin/plugins/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="admin/plugins/jquery/jquery.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>
